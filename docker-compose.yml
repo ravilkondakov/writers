@@ -78,7 +78,7 @@ services:
     <<: *app
     # makemigrations при старте нужен только пока миграций нет в репозитории;
     # после первого запуска закоммитьте появившиеся apps/*/migrations/0001_initial.py
-    command: sh -c "python manage.py makemigrations --noinput && python manage.py migrate && python manage.py runserver 0.0.0.0:8000"
+    command: sh -c "python manage.py makemigrations --noinput && python manage.py migrate && python manage.py runserver 0.0.0.0:8001"
     ports:
       - "8001:8001"
 
